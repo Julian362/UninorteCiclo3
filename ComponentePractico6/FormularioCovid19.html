@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de registro</title>
     <link rel="stylesheet" href="css/FormularioCovid19.css">
+    <script type="text/javascript" src="JS/nombre.js"></script>
 </head>
 
 <body>
@@ -14,28 +15,30 @@
         <h1>Registro para vacunación COVID-19</h1>
     </header>
     <br>
-    <form action="" method="GET">
+    <form id="formRegistro" name="registro" action="" method="GET" onsubmit="validar_formulario();">
         <label>Nombre: </label>
-        <input name="nombre" value="" type="text" />
+        <input id="txtNombre" name="nombre" value="" type="text" />
         <br>
         <label>Apellidos: </label>
-        <input name="apellidos" value="" type="text" />
+        <input id="txtApellido" name="apellidos" value="" type="text" />
         <br>
         <label>Sexo: </label>
         <input name="sexo" value="H" type="radio">Hombre
         <input name="sexo" value="F" type="radio">Mujer
         <br>
         <label>Email: </label>
-        <input name="email" value="" type="email" required />
+        <input id="txtEmail" name="email" value="" type="email" />
         <br>
         <label>Contraseña: </label>
-        <input name="password" value="" type="password" />
+        <input id="txtPassword" name="password" value="" type="password" />
         <br>
-        <input name="declaracion" value="" type="checkbox" />Declaro haber leído y aceptar las condiciones generales del
+        <input id="chkDeclaracion" name="declaracion" value="" type="checkbox" />Declaro haber leído y aceptar las
+        condiciones generales del
         programa y la normativa sobre protección de datos
         <br>
-        <input name="enviar" value="Enviar" type="submit" />
+        <input id="sbtEnviar" name="enviar" value="Enviar" type="submit" />
     </form>
+
 </body>
 
 </html>
