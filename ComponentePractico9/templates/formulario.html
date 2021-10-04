@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/FormularioCovid19.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='JS/validaciones.js') }}"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Registro para vacunación COVID-19</h1>
+    </header>
+    <br>
+    <form id="formRegistro" name="registro" action="{{ url_for('registro')}}" method="POST" onsubmit=" return validar_formulario();">
+        <label>Nombre: </label>
+        <input id="txtNombre" name="nombre" value="" type="text" />
+        <br>
+        <label>Apellidos: </label>
+        <input id="txtApellido" name="apellidos" value="" type="text" />
+        <br>
+        <label>Sexo: </label>
+        <input name="sexo" value="H" type="radio">Hombre
+        <input name="sexo" value="F" type="radio">Mujer
+        <br>
+        <label>Email: </label>
+        <input id="txtEmail" name="email" value="" type="email" />
+        <br>
+        <div id="password">
+            <label>Contraseña: </label>
+            <div>
+                <input id="txtPassword" name="password" value="" type="password" />
+                <img src="{{ url_for('static', filename='images/eye.png') }}" alt="" id="imgPassword">
+            </div>
+        </div>
+        <br>
+        <input id="chkDeclaracion" name="declaracion" value="S" type="checkbox" />Declaro haber leído y aceptar las
+        condiciones generales del
+        programa y la normativa sobre protección de datos
+        <br>
+        <input id="sbtEnviar" name="enviar" value="Enviar" type="submit" />
+        <p class="exito">
+            {% if exito: %}
+                {{ exito }}
+            {% endif %}
+        </p>
+        <p id="errores">
+            {% if errores %}
+                {{ errores }}
+            {% endif %}
+    </form>
+
+</body>
+
+</html>

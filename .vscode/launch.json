@@ -10,7 +10,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "ComponentePractico8/app.py",
+                "FLASK_APP": "ComponentePractico9/app.py",
                 "FLASK_ENV": "development"
             },
             "args": [
