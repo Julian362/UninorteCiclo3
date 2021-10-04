@@ -1,0 +1,77 @@
+body{
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.barra{
+    height: 3em;
+    max-height: 3em;
+    background-color: aqua;
+    margin: 0px;
+    border-bottom: solid 1px rgb(104, 104, 104);
+    color: rgb(80, 49, 37);
+    padding-top: 1em;
+}
+
+.titulo{
+    margin-top: 0px;
+    margin-left: 1em;
+    width: fit-content;
+    display: inline;
+}
+
+.opcion-barra {
+    width: fit-content;
+    display: inline;
+    float: right;
+    height: 100%;
+    padding-right: 1.5em;
+}
+
+.opcion-barra a{
+    text-decoration: none;
+    color: rgb(80, 49, 37);
+}
+
+.contenedor{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2em;
+}
+
+.encabezado{
+    text-align: center;
+    margin-bottom: 2 em;
+}
+
+
+.formulario {
+    border: 2px solid rgb(61, 99, 172);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.formulario label {
+    font-weight: bold;
+}
+
+.grupo {
+    margin-bottom: 1rem;
+}
+
+.control {
+    border: 1px solid rgb(61, 99, 172);
+    border-radius: 5px;
+    width: 100%;
+    line-height: 30px;
+}
+
+.boton {
+    border-style: none;
+    background-color: rgb(61, 99, 172);
+    color: white;
+    width: 100%;
+    border-radius: 50px;
+    line-height: 30px;
+}
