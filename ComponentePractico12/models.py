@@ -22,7 +22,7 @@ class mensaje():
         obj = db.ejecutar_select(sql,[ p_id ])
         if obj:
             if len(obj)>0:
-                return cls(obj[0]["id"],obj[0]["nombre"],obj[0]["correo"],obj[0]["respuesta"],obj[0]["estado"])
+                return cls(obj[0]["id"],obj[0]["nombre"],obj[0]["correo"],obj[0]["mensaje"],obj[0]["respuesta"],obj[0]["estado"])
 
         return None
 
@@ -37,7 +37,7 @@ class mensaje():
         return (afectadas >0)
 
     def responder(self):
-        sql = "UPDATE mensajes set, estado= R respuesta = ? WHERE id=?;"
+        sql = "UPDATE mensajes set estado='R', respuesta = ? WHERE id=?;"
         afectadas = db.ejecutar_insert(sql, [self.respuesta, self.id])
         return (afectadas >0)
 
